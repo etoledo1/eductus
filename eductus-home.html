@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="eng">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/x-icon" href="images/eductus-logo-colored.png">
+    <title> Eductus </title>
+    <style>
+        body {
+
+            font-family: Arial, Helvetica, sans-serif;
+            height: 100%;
+            margin-left: 100px;
+            margin-right: 100px;
+        }
+
+
+        .topnav {
+            overflow: hidden;
+            background-color: rgb(255, 255, 255);
+            margin: 0;
+        }
+
+        .topnav a {
+            float: left;
+            color: #48004b;
+            text-align: center;
+            padding: 12px 14px;
+            text-decoration: none;
+            font-size: 17px;
+        }
+
+        .topnav a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+
+        .topnav a.active {
+            background-color: #aa048e;
+            color: white;
+        }
+
+        .p-slide {
+            color: rgb(255, 255, 255);
+            margin-left: 300px;
+            margin-right: 300px;
+            text-align: center;
+            animation-name: p-slide;
+            animation-duration: 3s;
+        }
+
+        @keyframes p-slide {
+            from {
+                text-align: center;
+                opacity: 0%;
+            }
+
+            to {
+                text-align: center;
+                opacity: 100%;
+            }
+
+        }
+
+        html {
+            background: url(images/background2.png) no-repeat center center fixed;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+        }
+
+
+        .eductus {
+            margin-top: 50px;
+            margin-left: 41%;
+            animation-name: eductus;
+            animation-duration: 3s;
+
+        }
+
+        @keyframes eductus {
+            from {
+                margin-left: 0px;
+                opacity: 0%;
+            }
+
+            to {
+                margin-left: 41%;
+                opacity: 100%;
+            }
+
+        }
+
+        .block {
+            display: block;
+            border: 300px solid #ffffff;
+            margin-left: 0;
+            margin-right: 0;
+            z-index: -1;
+        }
+
+        .slideshow-container {
+            max-width: 400px;
+            background-color: white;
+            position: relative;
+            margin: auto
+        }
+
+        .mySlides {
+            display: none;
+            height: 400px;
+            position: relative;
+            margin: auto
+        }
+
+        .prev,
+        .next {
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            width: auto;
+            margin-top: -22px;
+            padding: 16px;
+            color: #222428;
+            font-weight: bold;
+            font-size: 30px;
+            transition: .6s ease;
+            border-radius: 0 3px 3px 0
+        }
+
+        .next {
+            right: -50px;
+            border-radius: 3px 3px 3px 3px
+        }
+
+        .prev {
+            left: -50px;
+            border-radius: 3px 3px 3px 3px
+        }
+
+        .prev:hover,
+        .next:hover {
+            color: #f2f2f2;
+            background-color: rgba(0, 0, 0, 0.8)
+        }
+
+
+        .numbertext {
+            color: #f2f2f2;
+            font-size: 12px;
+            padding: 8px 12px;
+            position: absolute;
+            top: 0
+        }
+
+        .dot {
+            cursor: pointer;
+            height: 15px;
+            width: 15px;
+            margin: 0 2px;
+            background-color: #bbb;
+            border-radius: 50%;
+            display: inline-block;
+            transition: background-color .6s ease
+        }
+
+        .active,
+        .dot:hover {
+            background-color: #717171
+        }
+
+        .h2-slide {
+            color: white;
+            text-align: center;
+            animation-name: h2-slide;
+            animation-duration: 3s;
+        }
+
+        @keyframes h2-slide {
+            from {
+                color: white;
+                text-align: center;
+                opacity: 0%;
+            }
+
+            to {
+                color: white;
+                text-align: center;
+                opacity: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="topnav">
+        <a class="active" href="eductus-home.html">Home</a>
+        <a href="eductus-about.html">About Us</a>
+        <a href="eductus-work.html">Our Work</a>
+        <a href="eductus-contact.html">Contact Us!</a>
+    </div>
+    <img src="images/eductus-logo.png" alt="Eductus" height="200" class="eductus">
+    <p class="p-slide">Eductus is a social impact organization that aims to support low-income Brazilian students on the
+        development of
+        their human, academic and professional potential.</p>
+
+    <h2 class="h2-slide">Our vision</h2>
+    <p class="p-slide">We want to be the biggest reference of social impact initiative in the field of education in
+        Brazil, with a focus
+        on the full potential of Brazilian students.</p>
+
+    <h2 class="h2-slide">Our Mission</h2>
+    <p class="p-slide">One day, all Brazilian students will have access to an education focused on forming young people
+        with the skills
+        necessary for their human, academic and professional development.</p>
+
+    <h2 class="h2-slide">Our Partners</h2>
+    <div class="slideshow-container">
+        <div class="slideshow-inner">
+            <div class="mySlides fade">
+
+                <img src="images/logo-gsi.png" style='width: 50%;' alt="Logo GSI" />
+
+            </div>
+
+            <div class="mySlides fade">
+
+                <img src="images/logo-iaysp.png" style='width: 50%;' alt="Logo IAYSP" />
+
+            </div>
+
+            <div class="mySlides fade">
+
+                <img src="images/logo-legado.png" style='width: 100%;' alt="Logo Legado" />
+
+            </div>
+
+            <div class="mySlides fade">
+
+                <img src="images/logo-iaysp.png" style='width: 100%;' alt="Logo IAYSP" />
+
+            </div>
+
+        </div>
+
+
+        <a class="prev" onclick='plusSlides(-1)'>&#10094;</a>
+        <a class="next" onclick='plusSlides(1)'>&#10095;</a>
+    </div>
+    <br />
+
+
+    <div style='text-align: center;'>
+        <span class="dot" onclick='currentSlide(1)'></span>
+        <span class="dot" onclick='currentSlide(2)'></span>
+        <span class="dot" onclick='currentSlide(3)'></span>
+        <span class="dot" onclick='currentSlide(4)'></span>
+    </div>
+    </div>
+    <div class="block"></div>
+    <script>
+        var slideIndex = 1;
+
+        var myTimer;
+
+        var slideshowContainer;
+
+        window.addEventListener("load", function () {
+            showSlides(slideIndex);
+            myTimer = setInterval(function () { plusSlides(1) }, 4000);
+
+            //COMMENT OUT THE LINE BELOW TO KEEP ARROWS PART OF MOUSEENTER PAUSE/RESUME
+            slideshowContainer = document.getElementsByClassName('slideshow-inner')[0];
+
+            //UNCOMMENT OUT THE LINE BELOW TO KEEP ARROWS PART OF MOUSEENTER PAUSE/RESUME
+            // slideshowContainer = document.getElementsByClassName('slideshow-container')[0];
+
+            slideshowContainer.addEventListener('mouseenter', pause)
+            slideshowContainer.addEventListener('mouseleave', resume)
+        })
+
+        // NEXT AND PREVIOUS CONTROL
+        function plusSlides(n) {
+            clearInterval(myTimer);
+            if (n < 0) {
+                showSlides(slideIndex -= 1);
+            } else {
+                showSlides(slideIndex += 1);
+            }
+
+            //COMMENT OUT THE LINES BELOW TO KEEP ARROWS PART OF MOUSEENTER PAUSE/RESUME
+
+            if (n === -1) {
+                myTimer = setInterval(function () { plusSlides(n + 2) }, 4000);
+            } else {
+                myTimer = setInterval(function () { plusSlides(n + 1) }, 4000);
+            }
+        }
+
+        //Controls the current slide and resets interval if needed
+        function currentSlide(n) {
+            clearInterval(myTimer);
+            myTimer = setInterval(function () { plusSlides(n + 1) }, 4000);
+            showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+            var i;
+            var slides = document.getElementsByClassName("mySlides");
+            var dots = document.getElementsByClassName("dot");
+            if (n > slides.length) { slideIndex = 1 }
+            if (n < 1) { slideIndex = slides.length }
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex - 1].style.display = "block";
+            dots[slideIndex - 1].className += " active";
+        }
+
+        pause = () => {
+            clearInterval(myTimer);
+        }
+
+        resume = () => {
+            clearInterval(myTimer);
+            myTimer = setInterval(function () { plusSlides(slideIndex) }, 4000);
+        }
+    </script>
+
+</body>

@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="images/eductus-logo-colored.png">
+    <title>Document</title>
+    <style>
+        body {
+
+            font-family: Arial, Helvetica, sans-serif;
+            height: 100%;
+        }
+
+        .topnav {
+            overflow: hidden;
+            background-color: rgb(255, 255, 255);
+        }
+
+        .topnav a {
+            float: left;
+            color: #48004b;
+            text-align: center;
+            padding: 12px 14px;
+            text-decoration: none;
+            font-size: 17px;
+        }
+
+        .topnav a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+
+        .topnav a.active {
+            background-color: #aa048e;
+            color: white;
+        }
+
+        p {
+            text-align: center;
+            color: rgb(255, 255, 255)
+        }
+
+        .center {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        input[type=text],
+        select,
+        textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid rgb(101, 2, 88);
+            border-radius: 4px;
+            resize: vertical;
+        }
+
+        label {
+            padding: 12px 12px 12px 0;
+            display: inline-block;
+        }
+
+        input[type=submit] {
+            background-color: rgb(101, 2, 88);
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            float: right;
+        }
+
+        input[type=submit]:hover {
+            background-color: #da92c9;
+        }
+
+        .container {
+            border-radius: 5px;
+            background-color: rgb(106, 75, 102);
+            padding: 20px;
+        }
+
+        .col-25 {
+            float: left;
+            width: 25%;
+            margin-top: 6px;
+        }
+
+        .col-75 {
+            float: left;
+            width: 75%;
+            margin-top: 6px;
+        }
+
+        /* Clear floats after the columns */
+        .row:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        /* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+        @media screen and (max-width: 600px) {
+
+            .col-25,
+            .col-75,
+            input[type=submit] {
+                width: 100%;
+                margin-top: 0;
+            }
+        }
+
+        body {
+
+            font-family: Arial, Helvetica, sans-serif;
+            height: 100%;
+            margin-left: 100px;
+            margin-right: 100px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="topnav">
+        <a class="active" href="eductus-home.html">Home</a>
+        <a href="eductus-about.html">About Us</a>
+        <a href="eductus-work.html">Our Work</a>
+        <a href="eductus-contact.html">Contact Us!</a>
+    </div>
+    <h1 style="color: rgb(79, 0, 79);"> Contact us! </h1>
+    <div class="container">
+        <form action="/action_page.php">
+            <div class="row">
+                <div class="col-25">
+                    <label for="fname" style="color:rgb(255, 255, 255);">First Name</label>
+                </div>
+                <div class="col-75">
+                    <input type="text" id="fname" name="firstname" placeholder="Your name..">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-25">
+                    <label for="lname" style="color:rgb(255, 255, 255);">Last Name</label>
+                </div>
+                <div class="col-75">
+                    <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-25">
+                    <label for="country" style="color:rgb(255, 255, 255);">E-mail</label>
+                </div>
+
+                <div class="col-75">
+                    <input type="text" id="country" name="country" placeholder="Your email..">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-25">
+                    <label for="subject" style="color:rgb(255, 255, 255);">Your message</label>
+                </div>
+                <div class="col-75">
+                    <textarea id="subject" name="subject" placeholder="Write something.."
+                        style="height:200px"></textarea>
+                </div>
+            </div>
+            <br>
+            <div class="row">
+                <input type="submit" value="Submit">
+            </div>
+        </form>
+    </div>
+
+</body>
+
+</html>
