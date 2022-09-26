@@ -20,6 +20,13 @@
             margin: 0;
         }
 
+        #logo {
+            float: left;
+            margin-top: 3px;
+            margin-left: 20px;
+            margin-right: 20px
+        }
+
         .topnav {
             font-size: 18pt;
             background-color: rgb(255, 255, 255);
@@ -169,6 +176,18 @@
         .container {
             background-color:#7a0065;
             margin-left: 100px;
+            animation-name: container;
+            animation-duration: 3s;
+        }
+
+        @keyframes container {
+            from {
+                opacity: 0%;
+            }
+
+            to {
+                opacity: 100%;
+            }
         }
 
         .col-25 {
@@ -208,8 +227,7 @@
 
 <body>
     <div class="topnav">
-        <img src="images/eductus-logo-colored.png" alt="eductus"
-            style="float:left; margin-top: 3px; margin-left:20px; margin-right: 20px" height="55px">
+        <img id="logo" src="images/eductus-logo-colored.png" alt="eductus" height="55px">
         <a href="eductus-home.html">Home</a>
         <a href="eductus-about.html">About Us</a>
         <div class="dropdown">

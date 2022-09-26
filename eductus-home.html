@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="eng">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <!-- Professor, the icon is not working anymore but it was in the Webtech repository. Do you have any idea why? -->
+    <link rel="icon" type="image/x-icon" href="images/eductus-logo-colored.png">
+    <title> Eductus </title>
+    <!-- inspiration websites: https://totidiversidade.com.br/ https://malala.org/ https://girlswhocode.com/ -->
+    <style>
+        body {
+            font-family: 'Bebas Neue', cursive;
+            letter-spacing: 1.3px;
+            font-size: 18pt;
+            height: 100%;
+            margin: 0;
+        }
+
+        #logo {
+            float: left;
+            margin-top: 3px;
+            margin-left: 20px;
+            margin-right: 20px
+        }
+
+        .topnav {
+            font-size: 18pt;
+            background-color: rgb(255, 255, 255);
+            position: fixed;
+            width: 100%;
+            height: 62px;
+            animation-name: topnav;
+            animation-duration: 3s;
+            font-family: 'Bebas Neue', cursive;
+            z-index: 1;
+        }
+
+        @keyframes topnav {
+            from {
+                opacity: 0%;
+            }
+
+            to {
+                opacity: 100%;
+            }
+        }
+
+        .topnav a {
+            float: left;
+            color: #812192;
+            text-align: center;
+            padding: 12.5px 14px;
+            text-decoration: none;
+            font-size: 22pt;
+        }
+
+        .topnav a:hover,
+        .dropbtn:hover {
+            background-color: #7a0065;
+            color: rgb(255, 255, 255);
+        }
+
+        .topnav a.active {
+            background-color: #7a0065;
+            color: white;
+        }
+
+        .dropbtn {
+            font-family: 'Bebas Neue', cursive;
+            letter-spacing: 1.3px;
+            float: none;
+            color: #812192;
+            text-align: center;
+            padding: 12px 12px;
+            font-size: 22pt;
+            border: none;
+            background-color: white;
+        }
+
+        .dropdown {
+            float: left;
+            position: relative;
+            overflow: visible;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 165px;
+            overflow: visible;
+        }
+
+        .dropdown-content a {
+            float: none;
+            background-color: #a13c81;
+            color: rgb(255, 255, 255);
+            padding: 12px 14px;
+            text-decoration: none;
+            display: block;
+            text-align: left;
+            overflow: visible;
+            font-size: 20pt;
+            letter-spacing: 1.3px;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #a13c81;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+            background-color: #7a0065;
+        }
+
+        .dropdown:hover .dropbtn {
+            background-color: #7a0065;
+            color: white;
+        }
+
+        .p-slide {
+            color: #7a0065;
+            font-size: 32px;
+            margin-left: 450px;
+            margin-right: 140px;
+            margin-top: 35px;
+            text-align: left;
+            animation-name: p-slide;
+            animation-duration: 3s;
+        }
+
+        @keyframes p-slide {
+            from {
+                text-align: left;
+                margin-right: 20px;
+                margin-left: 550px;
+                opacity: 0%;
+            }
+
+            to {
+                text-align: left;
+                margin-left: 450px;
+                margin-right: 140px;
+                opacity: 100%;
+            }
+        }
+
+        .p-slide-first {
+            color: #ffffff;
+            font-size: 37px;
+            position: absolute;
+            margin-top: -310px;
+            margin-left: 750px;
+            margin-right: 150px;
+            text-align: left;
+            animation-name: p-slide-first;
+            animation-duration: 3s;
+        }
+
+        @keyframes p-slide-first {
+            from {
+                text-align: left;
+                margin-left: 900px;
+                margin-right: -20px;
+                opacity: 0%;
+            }
+
+            to {
+                text-align: left;
+                margin-left: 750px;
+                margin-right: 150px;
+                opacity: 100%;
+            }
+        }
+
+        html {
+            /* background: url(images/background2.png) no-repeat center center fixed;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover; */
+            background-color: #7a0065;
+        }
+
+
+        /* .eductus {
+            position:absolute;
+            margin-top: 50px;
+            margin-left: 43%;
+            animation-name: eductus;
+            animation-duration: 3s;
+
+        } */
+
+        /* @keyframes eductus {
+            from {
+                margin-left: 0px;
+                opacity: 0%;
+            }
+
+            to {
+                margin-left: 43%;
+                opacity: 100%;
+            }
+
+        } */
+
+        .block {
+            display: block;
+            background-color: white;
+            margin-top: -100px;
+            height: 200px;
+            width: 100%;
+            z-index: -1;
+        }
+
+        .slideshow-container {
+            width: 400px;
+            height: 170px;
+            position: absolute;
+            text-align: center;
+            margin-top: -36px;
+            margin-left: 37.5%;
+            z-index: 1;
+        }
+
+        .mySlides {
+            display: none;
+            position: relative;
+            text-align: center;
+            margin-bottom: 0px;
+            z-index: 1;
+        }
+
+        .prev,
+        .next {
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            width: auto;
+            margin-top: -55px;
+            padding: 16px;
+            color: rgb(114, 0, 86);
+            font-weight: bold;
+            font-size: 30px;
+            transition: .6s ease;
+            border-radius: 0 3px 3px 0;
+            z-index: 1;
+        }
+
+        .next {
+            right: -50px;
+            border-radius: 3px 3px 3px 3px
+        }
+
+        .prev {
+            left: -50px;
+            border-radius: 3px 3px 3px 3px
+        }
+
+        .prev:hover,
+        .next:hover {
+            color: #f2f2f2;
+            background-color: rgba(111, 2, 69, 0.8)
+        }
+
+        .numbertext {
+            color: #f2f2f2;
+            font-size: 12px;
+            padding: 8px 12px;
+            position: absolute;
+            top: 0
+        }
+
+        .block-slide {
+            display: block;
+            position: absolute;
+            background-color: white;
+            opacity: 100%;
+            margin-top: -10px;
+            height: 260px;
+            width: 100%;
+            z-index: -1;
+            animation-name: block-slide;
+            animation-duration: 3s;
+        }
+
+        @keyframes block-slide {
+            from {
+                margin-left: -300px;
+                opacity: 0%;
+            }
+
+            to {
+                margin-left: 0px;
+                opacity: 100%;
+            }
+        }
+
+        .h2-slide-purple {
+            color: #7a0065;
+            text-align: center;
+            margin-top: 12px;
+            margin-bottom: -10px;
+            animation-name: h2-slide-purple;
+            font-size: 32pt;
+            animation-duration: 3s;
+        }
+
+        @keyframes h2-slide-purple {
+            from {
+                color: #7a0065;
+                text-align: center;
+                opacity: 0%;
+            }
+
+            to {
+                color: #7a0065;
+                text-align: center;
+                opacity: 100%;
+            }
+        }
+
+        .h2-slide-white {
+            color: #ffffff;
+            text-align: center;
+            animation-name: h2-slide-white;
+            font-size: 32pt;
+            animation-duration: 3s;
+        }
+
+        @keyframes h2-slide-white {
+            from {
+                color: #ffffff;
+                text-align: center;
+                opacity: 0%;
+            }
+
+            to {
+                color: #ffffff;
+                text-align: center;
+                opacity: 100%;
+            }
+        }
+
+        .icon-vision {
+            float: left;
+            height: 110px;
+            padding: 6px;
+            margin-top: 35px;
+            margin-left: 220px;
+            background-color: #7a0065;
+            animation-name: icon-vision;
+            animation-duration: 4s;
+        }
+
+        @keyframes icon-vision {
+            from {
+                opacity: 0%;
+            }
+
+            to {
+                opacity: 100%;
+            }
+        }
+
+        .students {
+            animation-name: students;
+            animation-duration: 3s;
+            margin-left: 100px;
+            margin-top: 50px;
+            height: 450px;
+            z-index: -1;
+        }
+
+        @keyframes students {
+            from {
+                margin-left: -300px;
+                opacity: 0%;
+            }
+
+            to {
+                margin-left: 100px;
+                opacity: 100%;
+            }
+        }
+
+        h3 {
+            color: white;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="topnav">
+        <img id="logo" src="images/eductus-logo-colored.png" alt="eductus" height="55px">
+        <a class="active" href="eductus-home.html">Home</a>
+        <a href="eductus-about.html">About Us</a>
+        <div class="dropdown">
+            <button class="dropbtn">Our Work </button>
+            <div class="dropdown-content">
+                <a href="eductus-work.html">Our Projects</a>
+            </div>
+        </div>
+        <a href="eductus-contact.html">Contact Us!</a>
+        <a href="eductus-contact.html">Volunteer</a>
+        <a href="https://grifa.me/instituicao/eductus" target="_blank">Donate</a>
+    </div>
+
+    <img class="students" src="images/students5.png" alt="students" height="278.5px">
+    <!-- <img src="images/eductus-logo.png" alt="Eductus" height="200" class="eductus"> -->
+    <p class="p-slide-first">Eductus is a social impact organization that aims to support low-income Brazilian students on the development of their human, academic and professional potential.</p>
+    <div class="block-slide"></div>
+    <h2 class="h2-slide-purple">Our vision</h2>
+    <img class="icon-vision" src="images/vision.png" alt="vision">
+    <p class="p-slide"> One day, all Brazilian students will have access to an education focused on forming young people with the skills necessary for their human, academic and professional development.</p>
+
+    <h2 class="h2-slide-white">Our Work</h2>
+    <h3>Mentoriza [add button] </h3>
+    <h3>Youth Leadership Community [add button] </h3>
+    <h3>Eductus Lab [add button] </h3>
+    <!-- Professor I will change the "style" part but this won't be included in the actual website, I am putting it just for you to know the goals for this website and then I will delete it later so I did not think creating a class for it right now would be necessary-->
+    <p style="color:white; font-size: 16pt; margin-left: 200px; margin-right: 200px; text-align: left;"><strong>Goals for this website:</strong> share information about Eductus' work and transparency about our numbers and impact, besides making a call to action for volunteers, donors and sponsors to support our work. </p>
+    <p style="color:white; font-size: 16pt; margin-left: 200px; margin-right: 200px; text-align: left;"><strong>Target audience:</strong> low-income students aged 15 up to 25 from Brazil, volunteers, donors, and sponsors. </p>
+    <p style="color:white; font-size: 16pt; margin-left: 200px; margin-right: 200px; text-align: left;"><strong>Website's content:</strong> Home: basic information about Eductus and our projects with a button in each project for the person to click and be redirected to the "our projects" part. About us: more detailed information about the organization, our history and our team. Our work -- Our projects: detailed information about our projects, numbers, and how it works. Contact Us: a form to submit a message (I will add more stuff later). Volunteer: a more specific form for people to fill in case they are interested in volunteering with us. Donate: not sure yet, It currently takes the person to an external platform which is in portuguese and I don't think it looks nice, so I will change it later. Sponsor a Project!: in case a company or organization is interested in sponsoring one of our projects, they can fill out a form as well (I need to add it). </p>
+
+    <h2 class="h2-slide-white">Our Partners</h2>
+    <br>
+    <div class="slideshow-container">
+        <div class="slideshow-inner">
+            <div class="mySlides fade">
+                <img src="images/logo-gsi.png" style='width: 100%;' alt="Logo GSI" />
+            </div>
+
+            <div class="mySlides fade">
+                <img src="images/logo-iaysp.png"
+                    style='width: 100%; position: absolute; margin-top: 20px; margin-left: -200px;' alt="Logo IAYSP" />
+            </div>
+
+            <div class="mySlides fade">
+                <img src="images/logo-legado.png" style='width: 100%;' alt="Logo Legado" />
+            </div>
+
+            <!-- <div class="mySlides fade">
+                <img src="images/logo-iaysp.png" style='width: 100%;' alt="Logo IAYSP" />
+            </div> -->
+
+        </div>
+
+
+        <a class="prev" onclick='plusSlides(-1)'>&#10094;</a>
+        <a class="next" onclick='plusSlides(1)'>&#10095;</a>
+    </div>
+    <br>
+    <div style='text-align: center;'>
+        <span class="dot" onclick='currentSlide(1)'></span>
+        <span class="dot" onclick='currentSlide(2)'></span>
+        <span class="dot" onclick='currentSlide(3)'></span>
+        <span class="dot" onclick='currentSlide(4)'></span>
+    </div>
+    </div>
+    <div class="block"></div>
+    <script>
+        var slideIndex = 1;
+
+        var myTimer;
+
+        var slideshowContainer;
+
+        window.addEventListener("load", function () {
+            showSlides(slideIndex);
+            myTimer = setInterval(function () { plusSlides(1) }, 4000);
+
+            //COMMENT OUT THE LINE BELOW TO KEEP ARROWS PART OF MOUSEENTER PAUSE/RESUME
+            slideshowContainer = document.getElementsByClassName('slideshow-inner')[0];
+
+            //UNCOMMENT OUT THE LINE BELOW TO KEEP ARROWS PART OF MOUSEENTER PAUSE/RESUME
+            // slideshowContainer = document.getElementsByClassName('slideshow-container')[0];
+
+            slideshowContainer.addEventListener('mouseenter', pause)
+            slideshowContainer.addEventListener('mouseleave', resume)
+        })
+
+        // NEXT AND PREVIOUS CONTROL
+        function plusSlides(n) {
+            clearInterval(myTimer);
+            if (n < 0) {
+                showSlides(slideIndex -= 1);
+            } else {
+                showSlides(slideIndex += 1);
+            }
+
+            //COMMENT OUT THE LINES BELOW TO KEEP ARROWS PART OF MOUSEENTER PAUSE/RESUME
+
+            if (n === -1) {
+                myTimer = setInterval(function () { plusSlides(n + 2) }, 4000);
+            } else {
+                myTimer = setInterval(function () { plusSlides(n + 1) }, 4000);
+            }
+        }
+
+        //Controls the current slide and resets interval if needed
+        function currentSlide(n) {
+            clearInterval(myTimer);
+            myTimer = setInterval(function () { plusSlides(n + 1) }, 4000);
+            showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+            var i;
+            var slides = document.getElementsByClassName("mySlides");
+            var dots = document.getElementsByClassName("dot");
+            if (n > slides.length) { slideIndex = 1 }
+            if (n < 1) { slideIndex = slides.length }
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex - 1].style.display = "block";
+            dots[slideIndex - 1].className += " active";
+        }
+
+        pause = () => {
+            clearInterval(myTimer);
+        }
+
+        resume = () => {
+            clearInterval(myTimer);
+            myTimer = setInterval(function () { plusSlides(slideIndex) }, 4000);
+        }
+    </script>
+
+</body>
