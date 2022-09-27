@@ -243,7 +243,7 @@
     <br>
     <br>
     <div class="container">
-        <form action="/action_page.php">
+        <form method="post" action="https://oim-apis.herokuapp.com/form2">
             <div class="row">
                 <div class="col-25">
                     <label for="fname" style="color:rgb(255, 255, 255);">First Name</label>
@@ -262,19 +262,19 @@
             </div>
             <div class="row">
                 <div class="col-25">
-                    <label for="country" style="color:rgb(255, 255, 255);">E-mail</label>
+                    <label for="email" style="color:rgb(255, 255, 255);">E-mail</label>
                 </div>
 
                 <div class="col-75">
-                    <input type="text" id="country" name="country" placeholder="Your email..">
+                    <input type="text" id="email" name="email" placeholder="Your email..">
                 </div>
             </div>
             <div class="row">
                 <div class="col-25">
-                    <label for="subject" style="color:rgb(255, 255, 255);">Your message</label>
+                    <label for="message" style="color:rgb(255, 255, 255);">Your message</label>
                 </div>
                 <div class="col-75">
-                    <textarea id="subject" name="subject" placeholder="Write something.."
+                    <textarea id="message" name="message" placeholder="Write something.."
                         style="height:200px"></textarea>
                 </div>
             </div>
