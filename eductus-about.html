@@ -17,7 +17,7 @@
             font-family: 'Bebas Neue', cursive;
             background-color: #7a0065;
             letter-spacing: 1.3px;
-            font-size: 18pt;
+            font-size: 21pt;
             height: 100%;
             margin: 0;
         }
@@ -124,6 +124,28 @@
             color: white;
         }
 
+        .eductus {
+            position: absolute;
+            margin-top: 50px;
+            margin-left: 43%;
+            animation-name: eductus;
+            animation-duration: 3s;
+
+        }
+
+        @keyframes eductus {
+            from {
+                margin-left: 0px;
+                opacity: 0%;
+            }
+
+            to {
+                margin-left: 43%;
+                opacity: 100%;
+            }
+
+        }
+
         .h2-slide {
             color: #ffffff;
             text-align: center;
@@ -150,7 +172,7 @@
         .p-slide {
             color: #ffffff;
             position: relative;
-            font-size: 32px;
+            font-size: 21pt;
             margin-left: 150px;
             margin-right: 150px;
             margin-top: 30px;
@@ -175,16 +197,27 @@
             }
         }
 
-        /* .ester {
-            border-radius: 100%;
-        } */
+        .ester {
+            height: 200px;
+            border-radius: 15%;
+            /* border-width: 3px;
+            border-style: solid;
+            border-color: rgb(255, 255, 255); */
+            margin-left: 150px;
+            float: left;
+        }
 
+        .manu {
+            height: 200px;
+            border-radius: 15%;
+            margin-left: 150px;
+        }
     </style>
 </head>
 
 <div class="topnav">
-    <img id="logo" src="images/eductus-logo-colored.png" alt="eductus" height="55px">
-    <a href="eductus-home.html">Home</a>
+    <img id="logo" src="images/eductus-logo-colored.png" title="eductus " alt="eductus" height="55px">
+    <a href="index.html">Home</a>
     <a class="active" href="eductus-about.html">About Us</a>
     <div class="dropdown">
         <button class="dropbtn">Our Work </button>
@@ -198,12 +231,32 @@
 </div>
 <br>
 <br>
-
-<h2 class="h2-slide">Who are we</h2>
-<p class="p-slide"> Hi</p>
+<h2 class="h2-slide">Who we are</h2>
+<!-- <img class="eductus" src="eductus-logo.png" width="150px" title="Eductus" alt="Eductus"> -->
+<p class="p-slide"> Eductus is a social impact organization that works through a network of projects focused on
+    developing the human, academic and professional potential of young Brazilians.</p>
+<p class="p-slide"> Our story begins in 2018 with a group of young students who aimed to use digital technologies to
+    increase the access of low-income youth to opportunities for personal development, academic knowledge and
+    professional growth. In that same year, the first Virtual Conference on Youth Protagonism was created, 100%
+    free and focused on youth empowerment in Brazil, which in its first edition reached 500 people, and in the following
+    years reached a total of 4,500 young people through its five editions. After the work carried out and accumulating
+    several positive feedbacks, the desire arose to create something beyond that carried the essence of our purpose,
+    connecting young people and offering opportunities to develop the necessary skills so that these students can be
+    successful in the next stages of their life. Thus, the first steps of the foundation of the Eductus Network began to
+    be taken together with the creation of new initiatives to act on different problems of the Brazilian educational
+    scenario.</p>
 
 <h2 class="h2-slide">Our team</h2>
-<!-- <img class="ester" src="images/ester-toledo-photo.jpg" alt="Ester" height="200px"/> -->
+<p class="p-slide">
+    We are a team of people spread across the country, from different contexts and experiences, and with one thing in
+    common: passion for education and social impact in Brazil!
+</p>
+<p class="h2-slide" style="font-size: 24pt; font-weight:bold;">Our directory board</p>
+<img class="ester" src="images/ester-toledo-photo.jpg" alt="Ester" height="400px" style="float: left;" />
+<p class="p-slide" style="font-size: 18pt; margin-left: 400px;">Ester Toledo is a social entrepreneur and education activist. She currently studies at Babson College and is the Co-Founder and Administrative Director of Eductus. Her main goal is to work on empowering low-income students and promoting youth leadership on environmental and social challenges. She has also worked in organizations such as Ashoka, besides having international education experience in institutions such as the Universitat Autònoma de Barcelona (Spain) and Toulouse Business School (France).</p>
+<br>
+<img class="manu" src="images/manu.jpg" alt="Ester" height="400px" style="float: left;"/>
+<p class="p-slide" style="font-size: 18pt; margin-left: 400px;">Emanuele Gonçalves is an education/pedagogy major and is also specialized in Entrepreneurial Education, Educational and Project Management, and Distance Learning. She has experience in formal and informal education, having worked with schools, companies such as Ambev and in the nonprofit sector. Currently she works with academic content production and she is the Organizational Development Director at Eductus.</p>
 </body>
 
 </html>
